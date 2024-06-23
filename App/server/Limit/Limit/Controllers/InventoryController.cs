@@ -25,5 +25,14 @@ namespace Limit.Controllers
         {
             return Execute((userId, token) => _inventoryDataService.GetAsync(inventoryFilter, userId, token), "GetListAsync");            
         }
+
+
+        [Authorize]
+        [HttpPost("Add")]
+
+        public Task<IActionResult> AddAsync([FromBody] InventoryCreator creator)
+        {
+            return Execute((userId, token) => _inventoryDataService.AddAsync(creator, userId, token), "AddAsync");
+        }
     }
 }
