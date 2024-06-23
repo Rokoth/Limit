@@ -13,9 +13,10 @@ namespace Limit.Controllers
     [ApiController]
     [Route("[controller]")]
     public class MapController(IServiceProvider serviceProvider) : CommonControllerBase(serviceProvider)
-    {
-        private const string ErrorMessageFormat = "Ошибка при обработке запроса MapController::{method}: {message} {stackTrace}";
+    {        
         private readonly IMapDataService _mapDataService = serviceProvider.GetRequiredService<IMapDataService>();
+
+        protected override string ErrorMessageFormat => "Ошибка при обработке запроса MapController::{method}: {message} {stackTrace}";
 
         [Authorize]
         [HttpPost("GetList")]
