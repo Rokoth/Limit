@@ -42,6 +42,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Limit.Common\Limit.Common.csproj" />
+    <ProjectReference Include="..\Limit.Contract\Limit.Contract.csproj" />
     <ProjectReference Include="..\Limit.Db\Limit.Db.csproj" />
     <ProjectReference Include="..\Limit.Deployer\Limit.Deployer.csproj" />
   </ItemGroup>
