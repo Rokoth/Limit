@@ -9,6 +9,6 @@ namespace Limit.Contract.Interfaces
 {
     public interface ICharacteristicDataService
     {
-        Task<Characteristic> GetAsync(CharacteristicFilter characteristicFilter, Guid userId, CancellationToken token);
+        Task<CharacteristicList> GetAsync(CharacteristicFilter characteristicFilter, Guid userId, CancellationToken token);
     }
 }

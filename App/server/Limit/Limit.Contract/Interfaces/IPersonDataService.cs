@@ -4,6 +4,6 @@ namespace Limit.Contract.Interfaces
 {
     public interface IPersonDataService
     {
-        Task<Person> GetAsync(PersonFilter personFilter, Guid userId, CancellationToken token);
+        Task<PersonList> GetAsync(PersonFilter personFilter, Guid userId, CancellationToken token);
     }
 }
