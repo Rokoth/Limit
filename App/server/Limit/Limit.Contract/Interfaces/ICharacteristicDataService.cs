@@ -1,9 +1,4 @@
 ﻿using Limit.Contract.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Limit.Contract.Interfaces
 {
@@ -12,5 +7,7 @@ namespace Limit.Contract.Interfaces
         Task<CharacteristicList> GetAsync(CharacteristicFilter characteristicFilter, Guid userId, CancellationToken token);
 
         Task<Characteristic> GetAsync(Guid id, Guid userId, CancellationToken token);
+
+        Task<Characteristic> UpdateAsync(CharacteristicUpdater updater, Guid userId, CancellationToken token);
     }
 }

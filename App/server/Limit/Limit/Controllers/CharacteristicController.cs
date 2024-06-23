@@ -32,5 +32,12 @@ namespace Limit.Controllers
         {
             return Execute((userId, token) => _characteristicDataService.GetAsync(id, userId, token), "GetItemAsync");
         }
+
+        [HttpPost("Update")]
+
+        public Task<IActionResult> UpdateAsync([FromBody] CharacteristicUpdater updater)
+        {
+            return Execute((userId, token) => _characteristicDataService.UpdateAsync(updater, userId, token), "UpdateAsync");
+        }
     }
 }
